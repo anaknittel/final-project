@@ -1,9 +1,14 @@
 import React from "react";
-import logo from "./logo.svg";
+import Weather from "./Weather";
 import "./App.css";
 
-function App() {
-  return <h1>weather app</h1>;
+export default function App() {
+  return (
+    <div className="App">
+      <div className="container">
+        <Weather />
+      </div>
+      <footer>This App was created by Ana Knittel</footer>
+    </div>
+  );
 }
-
-export default App;
