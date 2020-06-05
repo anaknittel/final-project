@@ -7,8 +7,8 @@ export default function App() {
     <div className="App">
       <div className="container">
         <Weather />
+        <footer>This App was created by Ana Knittel</footer>
       </div>
-      <footer>This App was created by Ana Knittel</footer>
     </div>
   );
 }

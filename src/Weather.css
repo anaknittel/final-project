@@ -1,3 +1,9 @@
+.weather {
+  margin-top: 40px;
+  padding: 0px 30px 0px 30px;
+  border: gray solid 2px;
+  border-radius: 5px;
+}
 .form {
   margin-top: 40px;
 }
@@ -10,20 +16,19 @@
   color: #21837b;
   font-size: 30px;
   font-weight: 500;
-  margin: -5px auto 5px 10px;
+  padding: 0px;
 }
 
 .Date {
   font-size: 16px;
   font-weight: 500;
-  margin: -5px auto 20px 10px;
+  padding: 0px;
 }
 
 ul {
   list-style: none;
   font-size: 14px;
-  margin-left: -30px;
-  line-height: 25px;
+  padding: 0px;
 }
 
 img {
@@ -38,9 +43,10 @@ img {
   font-weight: 400;
 }
 
-.units {
+.weather .units {
   font-size: 14px;
   font-weight: 400;
   margin-left: 5px;
-  margin-top: 100px;
+  position: relative;
+  top: -15px;
 }

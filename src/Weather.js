@@ -1,9 +1,12 @@
 import React from "react";
+import axios from "axios";
 import "./Weather.css";
 
 export default function Weather() {
+  let apiKey = "117c16c8e34c1f00f925ddb4052594d6";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Lisbon&appid=${apiKey}`;
   return (
-    <div>
+    <div className="weather">
       <form>
         <div className="row" id="search-engine">
           <div className="col-9">
@@ -18,12 +21,12 @@ export default function Weather() {
             <input
               type="submit"
               placeholder="Submit"
-              className="btn btn-light"
+              className="btn btn-light w-100"
             />
           </div>
         </div>
       </form>
-      <hr />
+      <hr width="450px" />
       <div className="row">
         <div className="col-6">
           <div className="City">Lisbon</div>
@@ -37,7 +40,7 @@ export default function Weather() {
         </div>
         <div className="col-6">
           <img
-            src="https://www.ipma.pt/opencms/bin/icons/svg/weather/w_ic_d_01anim.svg"
+            src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
             alt="sunny"
             height="100px"
           />
@@ -47,6 +50,7 @@ export default function Weather() {
           </div>
         </div>
       </div>
+      <hr width="450px" />
     </div>
   );
 }
