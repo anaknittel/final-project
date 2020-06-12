@@ -9,7 +9,6 @@ export default function App() {
     <div className="App">
       <div className="container">
         <SearchEngine setWeather={setWeather} />
-        <p />
         <Description weather={weather} />
         <footer>This App was created by Ana Knittel</footer>
       </div>

@@ -1,5 +1,6 @@
 .weather {
-  margin-top: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding: 0px 30px 0px 30px;
   border: gray solid 2px;
   border-radius: 5px;
@@ -23,6 +24,7 @@
   font-size: 16px;
   font-weight: 500;
   padding: 0px;
+  margin-bottom: 15px;
 }
 
 ul {
@@ -49,4 +51,8 @@ img {
   margin-left: 5px;
   position: relative;
   top: -15px;
+}
+
+.capitalize {
+  text-transform: capitalize;
 }

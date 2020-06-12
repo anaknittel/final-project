@@ -13,6 +13,7 @@ export default function SearchEngine(props) {
 
   function getWeather(response) {
     props.setWeather(response.data);
+    console.log(response.data);
   }
 
   function handleCityChange(event) {
