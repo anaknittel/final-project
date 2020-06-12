@@ -34,7 +34,7 @@ export default function Description(props) {
           <div className="col-6">
             <img
               src="http://openweathermap.org/img/wn/${props.weather.weather[0].icon}@2x.png"
-              alt="sunny"
+              alt={props.weather.weather[0].description}
               height="100px"
             />
 
