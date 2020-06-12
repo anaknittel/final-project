@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SearchEngine from ".SearchEngine";
+import SearchEngine from "./SearchEngine";
 import Description from "./Description";
 import "./App.css";
 

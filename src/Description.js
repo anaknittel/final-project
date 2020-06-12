@@ -3,7 +3,7 @@ import "./Description.css";
 
 export default function Description(props) {
   if (props.weather == null) {
-    return <h1>Loading</h1>;
+    return <h1>Please Search for a City </h1>;
   } else {
     return (
       <div>
