@@ -56,3 +56,10 @@ img {
 .capitalize {
   text-transform: capitalize;
 }
+
+.units {
+  position: relative;
+  font-size: 14px;
+  left: 2px;
+  bottom: 14px;
+}
