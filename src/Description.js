@@ -1,6 +1,6 @@
 import React from "react";
 import "./Description.css";
-import FormatDate from "./FormatDate";
+import CurrentDate from "./CurrentDate";
 
 export default function Description(props) {
   if (props.weather == null) {
@@ -9,14 +9,16 @@ export default function Description(props) {
     let temperature = Math.round(props.weather.main.temp * 10) / 10;
     let feelsLike = Math.round(props.weather.main.feels_like * 10) / 10;
     //let iconUrl = props.weather.weather[0].icon;
-    let date = new Date(props.weather.dt * 1000);
+
+    let currentDate = new Date(props.weather.dt * 1000);
+
     return (
       <div>
         <hr width="450px" />
         <div className="row">
           <div className="col-6">
             <div className="City">{props.weather.name}</div>
-            <FormatDate formatDate={date} />
+            <CurrentDate date={currentDate} />
             <ul>
               <li>
                 <strong>Feels Like: </strong>
