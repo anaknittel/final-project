@@ -1,6 +1,7 @@
 import React from "react";
 import "./Description.css";
 import CurrentDate from "./CurrentDate";
+import UTC from "./UTC";
 
 export default function Description(props) {
   if (props.weather == null) {
@@ -11,6 +12,7 @@ export default function Description(props) {
     //let iconUrl = props.weather.weather[0].icon;
 
     let currentDate = new Date(props.weather.dt * 1000);
+    let localUTC = props.weather.timezone / 3600;
 
     return (
       <div>
@@ -19,6 +21,7 @@ export default function Description(props) {
           <div className="col-6">
             <div className="City">{props.weather.name}</div>
             <CurrentDate date={currentDate} />
+            <UTC UTC={localUTC} />
             <ul>
               <li>
                 <strong>Feels Like: </strong>
