@@ -1,5 +1,13 @@
 import React from "react";
+import "./UTC.css";
 
 export default function UTC(props) {
-  return "Hi";
+  let realUTC = props.UTC;
+  if (realUTC > 0) {
+    realUTC = `+${realUTC}`;
+  }
+  if (realUTC < 0) {
+    realUTC = `-${realUTC}`;
+  }
+  return <div className="utc">UTC {realUTC}</div>;
 }

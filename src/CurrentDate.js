@@ -16,7 +16,7 @@ export default function Date(props) {
     hour = `0${hour}`;
   }
   let minutes = props.date.getMinutes();
-  console.log(props.date.getMinutes());
+
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
