@@ -6,8 +6,6 @@ export default function UTC(props) {
   if (realUTC > 0) {
     realUTC = `+${realUTC}`;
   }
-  if (realUTC < 0) {
-    realUTC = `-${realUTC}`;
-  }
+
   return <div className="utc">UTC {realUTC}</div>;
 }
