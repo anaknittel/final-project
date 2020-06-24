@@ -1,5 +1,6 @@
 import React from "react";
 import "./UpdateDate.css";
+import UTC from "./UTC";
 
 export default function updateTime(props) {
   let days = [
@@ -11,12 +12,14 @@ export default function updateTime(props) {
     "Friday",
     "Saturday",
   ];
-  let day = days[props.updateTime.getDay()];
-  let hour = props.updateTime.getHours();
+
+  let date = new Date(props.updateTime.dt * 1000);
+  let day = days[date.getDay()];
+  let hour = date.getHours();
   if (hour < 10) {
     hour = `0${hour}`;
   }
-  let minutes = props.updateTime.getMinutes();
+  let minutes = date.getMinutes();
 
   if (minutes < 10) {
     minutes = `0${minutes}`;
@@ -25,7 +28,7 @@ export default function updateTime(props) {
   return (
     <div className="string">
       <strong>Last update:</strong> {""}
-      {day}, {hour}:{minutes}
+      {day}, {hour}:{minutes} <UTC UTC={props.updateTime.timezone / 3600} />
     </div>
   );
 }
