@@ -11,7 +11,7 @@ export default function LocalTime(props) {
     "Saturday",
   ];
 
-  let date = getDateInUTC();
+  let date = getDateInUTC(); // data vai ser definida como date(nova) do PC + offset do PC vs GMT
   date.setTime(date.getTime() + props.UTC * 3600 * 1000);
 
   let day = days[date.getUTCDay()];
