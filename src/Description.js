@@ -3,7 +3,8 @@ import "./Description.css";
 import UpdateDate from "./UpdateDate";
 import LocalTime from "./LocalTime";
 import UTC from "./UTC";
-import WeatherIcon from "./WeatherIcon";
+//import Icon from "./Icon";
+//import WeatherIcon from "react-icons-weather";
 
 export default function Description(props) {
   if (props.weather == null) {
@@ -11,7 +12,8 @@ export default function Description(props) {
   } else {
     let temperature = Math.round(props.weather.main.temp * 10) / 10;
     let feelsLike = Math.round(props.weather.main.feels_like * 10) / 10;
-    //let iconURL = props.weather.weather[0].icon;
+    let iconCode = props.weather.weather[0].icon;
+    let iconURL = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
     let updateDate = props.weather;
     let localUTC = props.weather.timezone / 3600;
@@ -42,8 +44,9 @@ export default function Description(props) {
             </ul>
           </div>
           <div className="col-6">
-            <WeatherIcon />
-
+            <div>
+              <img src={iconURL} />
+            </div>
             <div id="currentTemperature">
               {temperature}
               <span className="units">ºC | ºF</span>
