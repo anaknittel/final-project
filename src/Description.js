@@ -3,8 +3,7 @@ import "./Description.css";
 import UpdateDate from "./UpdateDate";
 import LocalTime from "./LocalTime";
 import UTC from "./UTC";
-//import Icon from "./Icon";
-//import WeatherIcon from "react-icons-weather";
+import WeatherIcon from "./WeatherIcon";
 
 export default function Description(props) {
   if (props.weather == null) {
@@ -45,7 +44,7 @@ export default function Description(props) {
           </div>
           <div className="col-6">
             <div>
-              <img src={iconURL} />
+              <WeatherIcon code={iconCode} />
             </div>
             <div id="currentTemperature">
               {temperature}

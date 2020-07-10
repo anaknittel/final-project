@@ -33,12 +33,6 @@ ul {
   padding: 0px;
 }
 
-img {
-  position: flex;
-  display: block;
-  margin: auto;
-}
-
 #currentTemperature {
   font-size: 35px;
   text-align: center;
