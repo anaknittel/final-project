@@ -4,6 +4,7 @@ import UpdateDate from "./UpdateDate";
 import LocalTime from "./LocalTime";
 import UTC from "./UTC";
 import WeatherIcon from "./WeatherIcon";
+import WeatherUnits from "./WeatherUnits";
 
 export default function Description(props) {
   if (props.weather == null) {
@@ -48,7 +49,8 @@ export default function Description(props) {
             </div>
             <div id="currentTemperature">
               {temperature}
-              <span className="units">ºC | ºF</span>
+              <WeatherUnits Temperature={temperature} />
+              <span>ºC | ºF</span>
             </div>
           </div>
         </div>
