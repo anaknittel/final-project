@@ -5,6 +5,7 @@ import LocalTime from "./LocalTime";
 import UTC from "./UTC";
 import WeatherIcon from "./WeatherIcon";
 import WeatherUnits from "./WeatherUnits";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Description(props) {
   if (props.weather == null) {
@@ -13,10 +14,9 @@ export default function Description(props) {
     let temperature = Math.round(props.weather.main.temp * 10) / 10;
     let feelsLike = Math.round(props.weather.main.feels_like * 10) / 10;
     let iconCode = props.weather.weather[0].icon;
-    let iconURL = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
-
     let updateDate = props.weather;
     let localUTC = props.weather.timezone / 3600;
+    let city = props.weather.name;
 
     return (
       <div>
@@ -48,12 +48,12 @@ export default function Description(props) {
               <WeatherIcon code={iconCode} />
             </div>
             <div id="currentTemperature">
-              {temperature}
               <WeatherUnits Temperature={temperature} />
-              <span>ºC | ºF</span>
             </div>
           </div>
         </div>
+        <hr width="450px" />
+        <WeatherForecast place={city} />
         <hr width="450px" />
         <UpdateDate updateTime={updateDate} />
       </div>
