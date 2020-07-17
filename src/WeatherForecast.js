@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./WeatherForecast.css";
-import WeatherHourlyForecast from "./WeatherHourlyForescast";
+import WeatherHourlyForescast from "./WeatherHourlyForescast";
 
 export default function Forecast(props) {
   const [apiCall, setApiCall] = useState(false);
@@ -12,11 +12,12 @@ export default function Forecast(props) {
     setApiCall(true);
   }
 
-  if (apiCall && props.city === forecast.city.name) {
+  if (apiCall && props.place === forecast.city.name) {
+    console.log(forecast.list[0]);
     return (
       <div className="row">
         {forecast.list.slice(0, 6).map(function (forecastHour) {
-          return <WeatherHourlyForecast data={forecastHour} />;
+          return <WeatherHourlyForescast data={forecastHour} />;
         })}
       </div>
     );
