@@ -7,7 +7,7 @@ export default function WeatherIcon(props) {
     "01d": "CLEAR_DAY",
     "02d": "PARTLY_CLOUDY_DAY",
     "03d": "PARTLY_CLOUDY_DAY",
-    "04d": "CLOUDY;",
+    "04d": "CLOUDY",
     "09d": "RAIN",
     "10d": "RAIN",
     "11d": "RAIN",
@@ -24,7 +24,6 @@ export default function WeatherIcon(props) {
     "50n": "FOG",
   };
 
-  //if (codeThirdLetterIsD(props.code)) {
   if (props.code.includes("d")) {
     return (
       <ReactAnimatedWeather
@@ -37,7 +36,7 @@ export default function WeatherIcon(props) {
     return (
       <ReactAnimatedWeather
         icon={codeMapping[props.code]}
-        color="black"
+        color="grey"
         animate={true}
       />
     );

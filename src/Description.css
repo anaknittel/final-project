@@ -66,3 +66,10 @@ ul {
   font-size: 25px;
   color: #21837b;
 }
+
+.col-6 canvas {
+  position: relative;
+  top: 40px;
+  left: 80px;
+  margin-bottom: 40px;
+}

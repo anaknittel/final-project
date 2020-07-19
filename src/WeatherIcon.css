@@ -1,5 +1,11 @@
 .col canvas {
   display: block;
-  margin: auto;
+  margin: 10px auto;
   width: 30px;
+}
+
+.col {
+  display: block;
+  margin: auto;
+  font-size: 14px;
 }

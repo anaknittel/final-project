@@ -24,7 +24,8 @@ export default function WeatherHourlyForecast(props) {
   return (
     <div className="col">
       <div>
-        {day} {hours}:00
+        <strong>{day} </strong>
+        {hours}:00
       </div>
       <div>
         <WeatherIcon code={props.data.weather[0].icon} />

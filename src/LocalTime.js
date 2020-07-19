@@ -12,10 +12,9 @@ export default function LocalTime(props) {
   ];
 
   let date = getDateInUTC();
-
   date.setTime(date.getTime() + props.UTC * 3600 * 1000);
 
-  let day = days[date.getUTCDay()];
+  let day = days[date.getDay()];
 
   let realHour = date.getHours();
 
@@ -39,7 +38,6 @@ export default function LocalTime(props) {
 
 function getDateInUTC() {
   let date = new Date();
-
   date.setTime(date.getTime() + date.getTimezoneOffset() * 60 * 1000);
 
   return date;
