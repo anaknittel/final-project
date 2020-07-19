@@ -9,7 +9,7 @@ import WeatherForecast from "./WeatherForecast";
 
 export default function Description(props) {
   if (props.weather == null) {
-    return <h1>Please Search for a City </h1>;
+    return <div className="search">Please Search for a City </div>;
   } else {
     let temperature = Math.round(props.weather.main.temp * 10) / 10;
     let feelsLike = Math.round(props.weather.main.feels_like * 10) / 10;
@@ -45,7 +45,7 @@ export default function Description(props) {
           </div>
           <div className="col-6">
             <div>
-              <WeatherIcon code={iconCode} />
+              <WeatherIcon code={iconCode} width={80} />
             </div>
             <div id="currentTemperature">
               <WeatherUnits Temperature={temperature} />
@@ -53,7 +53,7 @@ export default function Description(props) {
           </div>
         </div>
         <hr width="450px" />
-        <WeatherForecast place={city} />
+        <WeatherForecast place={city} UTC={localUTC} />
         <hr width="450px" />
         <UpdateDate updateTime={updateDate} />
       </div>

@@ -13,11 +13,10 @@ export default function Forecast(props) {
   }
 
   if (apiCall && props.place === forecast.city.name) {
-    console.log(forecast.list[0]);
     return (
       <div className="row">
         {forecast.list.slice(0, 6).map(function (forecastHour) {
-          return <WeatherHourlyForescast data={forecastHour} />;
+          return <WeatherHourlyForescast data={forecastHour} UTC={props.UTC} />;
         })}
       </div>
     );
