@@ -24,7 +24,9 @@ export default function WeatherHourlyForecast(props) {
   return (
     <div className="col">
       <div>
-        <strong>{day} </strong>
+        <div>
+          <strong>{day}</strong>
+        </div>
         {hours}:00
       </div>
       <div>
