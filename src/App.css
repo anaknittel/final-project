@@ -7,7 +7,7 @@
   font-size: 12px;
   position: relative;
   left: 45px;
-  margin-top: 5px;
+  margin-top: 8px;
 }
 
 .container {
@@ -16,4 +16,12 @@
   border-width: 2px;
   border-color: #bdbdbd;
   border-style: solid;
+}
+
+#linkedin-logo {
+  margin-left: 0px;
+}
+
+#instagram-logo {
+  margin-left: 8px;
 }
