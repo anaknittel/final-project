@@ -12,7 +12,7 @@ export default function App() {
         <SearchEngine setWeather={setWeather} />
         <Description weather={weather} />
       </div>
-      <footer>This App was created by Ana Knittel</footer>
+      <footer>Open Sourced App created by Ana Knittel</footer>
     </div>
   );
 }

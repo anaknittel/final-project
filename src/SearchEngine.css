@@ -1,0 +1,28 @@
+form {
+  width: 480px;
+  position: relative;
+  left: -20px;
+  margin-bottom: -10px;
+  margin-top: -10px;
+}
+
+.form-control {
+  margin-left: -10px;
+  max-width: 150%;
+}
+
+#submit .btn {
+  margin-left: -30px;
+  width: 130px;
+  position: relative;
+}
+
+#current .btn {
+  margin-top: 10px;
+  margin-left: -10px;
+  width: 200px;
+  position: relative;
+  background: #f8f9fa;
+  border-style: solid;
+  text-align: left;
+}
